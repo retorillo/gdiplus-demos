@@ -82,7 +82,7 @@ int wWinMain(HINSTANCE i, HINSTANCE p, PWSTR c, int s) {
   WNDCLASSEX cls;
   memset(&cls, 0, sizeof(WNDCLASSEX));
   cls.cbSize = sizeof(WNDCLASSEX);
-  cls.lpfnWndProc = WndProc;
+  cls.lpfnWndProc = reinterpret_cast<WNDPROC>(WndProc);
   cls.hInstance = i;
   cls.lpszClassName = WINDOW_CLASS;
   ATOM atom = RegisterClassEx(&cls);
