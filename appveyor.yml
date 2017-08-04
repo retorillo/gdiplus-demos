@@ -6,3 +6,4 @@ artifacts:
   - path: '**\*.exe'
 build_script:
   - cmd: msbuild /p:Configuration=Debug /p:Platform=x86 brush/app.xml
+  - cmd: msbuild /p:Configuration=Debug /p:Platform=x86 transform/app.xml
